@@ -8,13 +8,64 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <!-- COST OF SERVICE
+    inputType: type de text saisie
+    hint: description champ saisie -->
     <EditText
         android:id="@+id/cost_of_service"
-        android:layout_width="match_parent"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:inputType="text"
-        ></EditText>
+        android:inputType="numberDecimal"
+        android:hint="Cost of service">
+        <!---->
+    </EditText>
+
+    <!--HOW WAS THE SERVICE-->
+    <TextView
+        android:id="@+id/service_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service ?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cost_of_service"/>
+
+    <!--TIP OPTIONS
+    orientation = alignment buttons
+    checkedButton = selection par default-->
+    <RadioGroup
+        android:id="@+id/tip_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@id/option_20_percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_question">
+
+        <!-- ADD RadioButtons here -->
+        <RadioButton
+            android:id="@+id/option_20_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amazing (20%)"/>
+
+        <RadioButton
+            android:id="@+id/option_18_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good (18%)"/>
+
+        <RadioButton
+            android:id="@+id/option_15_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Okay (15%)"/>
+
+    </RadioGroup>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
