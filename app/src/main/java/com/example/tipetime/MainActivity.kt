@@ -13,5 +13,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Ecouteur de click
+        binding.calculateButton.setOnClickListener{calculateTip()}
+
     }
+
+    // function d'assistance
+    private fun calculateTip() {
+        val stringInTextField = binding.costOfService.text
+    }
+
 }
+
